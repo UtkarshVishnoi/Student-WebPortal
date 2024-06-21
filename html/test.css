@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 800px;
+  max-width: 100%;
+}
+
+.profile-section {
+  display: flex;
+  background-color: #4a90e2;
+  padding: 20px;
+  color: #fff;
+}
+
+.profile-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.basic-details {
+  flex: 2;
+  padding: 20px;
+}
+
+.basic-details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.basic-details p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.details-section {
+  padding: 20px;
+}
+
+.details-section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 5px;
+}
+
+.personal-details,
+.academic-records,
+.extracurricular {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}

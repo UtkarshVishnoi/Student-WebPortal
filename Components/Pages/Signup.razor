@@ -1,0 +1,51 @@
+@page "/signup"
+
+<title>Signup Form</title>
+<link rel="stylesheet" href="styles/user.css" />
+
+
+<div id="left-div">
+    <div id="left-img-div">
+        <img src="images/side.png" alt="Side Image" id="left-img" />
+    </div>
+
+</div>
+
+<div id="right-div">
+    <div id="right-img-div">
+        <img src="images/side2.jpg" alt="Background" id="right-img" />
+    </div>
+    <div class="wrapper">
+        <form action="#">
+            <h2>Signup </h2>
+            <div class="input-field">
+                <input type="text" required />
+                <label>Enter your Name</label>
+            </div>
+            <div class="input-field">
+                <input type="email" required />
+                <label>Enter your email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" required />
+                <label>Enter your password</label>
+            </div>
+            <div class="input-field">
+                <input type="password" required />
+                <label>Re-enter your password</label>
+            </div>
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember" />
+                    <p>Remember me</p>
+                </label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit">Sign Up</button>
+            <div class="register">
+                <p>Already have an account? <a href="/login">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+</div>
