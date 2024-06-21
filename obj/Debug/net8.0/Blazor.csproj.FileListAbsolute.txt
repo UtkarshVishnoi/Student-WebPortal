@@ -27,3 +27,4 @@
 /home/utkarsh/WebDev/Blazor/obj/Debug/net8.0/Blazor.pdb
 /home/utkarsh/WebDev/Blazor/obj/Debug/net8.0/Blazor.genruntimeconfig.cache
 /home/utkarsh/WebDev/Blazor/obj/Debug/net8.0/ref/Blazor.dll
+/home/utkarsh/WebDev/Blazor/obj/Debug/net8.0/Blazor.sourcelink.json
