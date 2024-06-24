@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
+      "Id": "/home/utkarsh/WebDev/Blazor/wwwroot/images/p1.jpg",
+      "PackagePath": "staticwebassets/images/p1.jpg"
+    },
+    {
+      "Id": "/home/utkarsh/WebDev/Blazor/wwwroot/images/search.svg",
+      "PackagePath": "staticwebassets/images/search.svg"
+    },
+    {
       "Id": "/home/utkarsh/WebDev/Blazor/wwwroot/images/side.png",
       "PackagePath": "staticwebassets/images/side.png"
     },

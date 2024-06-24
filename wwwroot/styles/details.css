@@ -124,7 +124,7 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10%;
+  height: 8%;
   width: 100%;
 }
 
@@ -132,7 +132,7 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: start;
-  height: 90%;
+  height: 92%;
   width: 100%;
   background-color: gray;
   overflow-y: auto;
