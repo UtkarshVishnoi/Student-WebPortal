@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebPortal.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebPortal.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\images\\p1.jpg",
+      "PackagePath": "staticwebassets\\images\\p1.jpg"
+    },
+    {
+      "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\images\\search.svg",
+      "PackagePath": "staticwebassets\\images\\search.svg"
+    },
+    {
+      "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\images\\side.png",
+      "PackagePath": "staticwebassets\\images\\side.png"
+    },
+    {
+      "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\images\\side2.jpg",
+      "PackagePath": "staticwebassets\\images\\side2.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebPortal.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebPortal.props",
+      "PackagePath": "build\\WebPortal.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebPortal.props",
+      "PackagePath": "buildMultiTargeting\\WebPortal.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebPortal.props",
+      "PackagePath": "buildTransitive\\WebPortal.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
