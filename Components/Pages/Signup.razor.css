@@ -149,3 +149,7 @@ button {
     background-color: rgb(206, 222, 255);
     max-width: 700px;
 }
+
+.auth-error {
+    color: red;
+}

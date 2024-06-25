@@ -59,3 +59,4 @@ E:\utkar\Documents\Projects\WebPortal\obj\Debug\net8.0\scopedcss\Components\Page
 E:\utkar\Documents\Projects\WebPortal\obj\Debug\net8.0\scopedcss\Components\Pages\Login.razor.rz.scp.css
 E:\utkar\Documents\Projects\WebPortal\obj\Debug\net8.0\scopedcss\Components\Pages\Signup.razor.rz.scp.css
 E:\utkar\Documents\Projects\WebPortal\obj\Debug\net8.0\scopedcss\Components\Pages\StudentDetails.razor.rz.scp.css
+E:\utkar\Documents\Projects\WebPortal\obj\Debug\net8.0\WebPortal.sourcelink.json

@@ -149,3 +149,7 @@ button[b-ptf7ba27pi] {
     background-color: rgb(206, 222, 255);
     max-width: 700px;
 }
+
+.auth-error[b-ptf7ba27pi] {
+    color: red;
+}

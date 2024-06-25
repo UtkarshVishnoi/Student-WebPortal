@@ -15,7 +15,7 @@ namespace WebPortal.Services
             return _dbcontext.tblStudent.ToList();
         }
 
-        public StudentClass getStudentDetails(int id)
+        public StudentClass? getStudentDetails(int id)
         {
             List<StudentClass> stdList = _dbcontext.tblStudent.ToList();
 
@@ -30,17 +30,30 @@ namespace WebPortal.Services
             return null;
         }
 
-        public StudentClass editDetails(int id)
+        public bool findUser(string username, string password)
         {
-            StudentClass student = new StudentClass();
+            List<StudentClass> stdList = getAllStudentDetails();
+
+            for (int i = 0; i < stdList.Count; i++)
+            {
+                if (stdList[i].username == username && stdList[i].password == password)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public StudentClass? editDetails(int id)
+        {
             return _dbcontext.tblStudent.FirstOrDefault(u => u.id == id);
         }
 
-        public bool addStudent(StudentClass student)
+        public void addStudent(StudentClass student)
         {
             _dbcontext.tblStudent.Add(student);
             _dbcontext.SaveChanges();
-            return true;
         }
 
         public bool updateDetails(StudentClass stdUpdate)
