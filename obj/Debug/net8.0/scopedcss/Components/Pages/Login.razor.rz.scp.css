@@ -149,3 +149,7 @@ button[b-q144vloex9] {
     background-color: rgb(206, 222, 255);
     max-width: 700px;
 }
+
+.auth-error[b-q144vloex9] {
+    color: red;
+}

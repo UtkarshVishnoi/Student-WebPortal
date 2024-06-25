@@ -1,4 +1,8 @@
 @page "/signup"
+@using WebPortal.Data
+@using WebPortal.Services
+@inherits OwningComponentBase<StudentService>
+@rendermode InteractiveServer
 
 <PageTitle>Signup Form</PageTitle>
 <link rel="stylesheet" href="styles/user.css" />
@@ -16,22 +20,22 @@
         <img src="images/side2.jpg" alt="Background" id="right-img" />
     </div>
     <div class="wrapper">
-        <form action="#">
+        <EditForm Model="obj" OnValidSubmit="addUser" FormName="SignupForm">
             <h2>Signup </h2>
             <div class="input-field">
-                <input type="text" required />
+                <input type="text" required @bind="obj.name"/>
                 <label>Enter your Name</label>
             </div>
             <div class="input-field">
-                <input type="email" required />
-                <label>Enter your email</label>
+                <input type="text" required @bind="obj.username" maxlength="50"/>
+                <label>Enter your username</label>
             </div>
             <div class="input-field">
-                <input type="password" required />
+                <input type="password" required @bind="obj.password" maxlength="50"/>
                 <label>Enter your password</label>
             </div>
             <div class="input-field">
-                <input type="password" required />
+                <input type="password" required @bind="repass" maxlength="50"/>
                 <label>Re-enter your password</label>
             </div>
             <div class="forget">
@@ -41,11 +45,65 @@
                 </label>
                 <a href="#">Forgot password?</a>
             </div>
+            @if (added == 1)
+            {
+                <p class="auth-error">Successfully Added User</p>
+            }
+            else if(added == 2)
+            {
+                <p class="auth-error">Password length should be more than 5</p>
+            }
+            else if(added == 3)
+            {
+                <p class="auth-error">Passwords do not match</p>
+            }
+            else if(added == 4)
+            {
+                <p class="auth-error">There should be atleast one special character</p>
+            }
             <button type="submit">Sign Up</button>
             <div class="register">
                 <p>Already have an account? <a href="/login">Login</a></p>
             </div>
-        </form>
+        </EditForm>
     </div>
 
 </div>
+
+@code {
+    IList<StudentClass> stdList;
+    string repass = "";
+
+    StudentClass obj = new StudentClass();
+
+    protected override void OnInitialized()
+    {
+        stdList = Service.getAllStudentDetails();
+    }
+
+    int added = 0;
+
+    void addUser()
+    {
+        int status = checkPassword(obj.password, repass);
+        if(status == 1)
+        {
+            Service.addStudent(obj);
+        }
+        added = status;
+    }
+
+    int checkPassword(string password, string repass)
+    {
+        int len = password.Length;
+        if (len < 5) return 2;
+        if (password != repass) return 3;
+
+        for(int i = 0; i < len; i++)
+        {
+            if (password[i] == '@' || password[i] == '#' || password[i] == '$') return 1;
+        }
+
+        return 4;
+    }
+}

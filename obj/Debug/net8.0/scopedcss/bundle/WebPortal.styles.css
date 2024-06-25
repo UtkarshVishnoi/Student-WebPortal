@@ -202,6 +202,9 @@ main[b-bmse3mvk0j] {
     }
 }
 /* _content/WebPortal/Components/Pages/Home.razor.rz.scp.css */
+h2[b-63co41mtsp] {
+    color: white;
+}
 /* _content/WebPortal/Components/Pages/Login.razor.rz.scp.css */
 .wrapper[b-q144vloex9] {
     max-width: 500px;
@@ -354,6 +357,10 @@ button[b-q144vloex9] {
     background-color: rgb(206, 222, 255);
     max-width: 700px;
 }
+
+.auth-error[b-q144vloex9] {
+    color: red;
+}
 /* _content/WebPortal/Components/Pages/Signup.razor.rz.scp.css */
 .wrapper[b-ptf7ba27pi] {
     max-width: 500px;
@@ -505,6 +512,10 @@ button[b-ptf7ba27pi] {
 #left-div[b-ptf7ba27pi] {
     background-color: rgb(206, 222, 255);
     max-width: 700px;
+}
+
+.auth-error[b-ptf7ba27pi] {
+    color: red;
 }
 /* _content/WebPortal/Components/Pages/StudentDetails.razor.rz.scp.css */
 *[b-mv7n2s407l] {

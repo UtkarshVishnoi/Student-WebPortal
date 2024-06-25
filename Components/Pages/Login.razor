@@ -1,4 +1,10 @@
 @page "/login"
+@using WebPortal.Data
+@using WebPortal.Services
+@inject NavigationManager Navigate
+
+@inherits OwningComponentBase<StudentService>
+@rendermode InteractiveServer
 
 <PageTitle>Login Form</PageTitle>
 <link rel="stylesheet" href="styles/user.css" />
@@ -16,14 +22,14 @@
 		<img src="images/side2.jpg" alt="Background" id="right-img" />
 	</div>
 	<div class="wrapper">
-		<form action="#">
+		<EditForm Model="obj" OnValidSubmit="findUser" FormName="LoginForm">
 			<h2>Login</h2>
 			<div class="input-field">
-				<input type="email" required />
-				<label>Enter your email</label>
+				<input type="text" required @bind="obj.username"/>
+				<label>Enter your username</label>
 			</div>
 			<div class="input-field">
-				<input type="password" required />
+				<input type="password" required @bind="obj.password"/>
 				<label>Enter your password</label>
 			</div>
 			<div class="forget">
@@ -33,11 +39,41 @@
 				</label>
 				<a href="#">Forgot password?</a>
 			</div>
+			@if (!found)
+			{
+				<p class="auth-error">Wrong Username/Password</p>
+			}
 			<button type="submit">Log In</button>
 			<div class="register">
 				<p>Don't have an account? <a href="/signup">Signup</a></p>
 			</div>
-		</form>
+		</EditForm>
 	</div>
 
 </div>
+
+@code {
+	IList<StudentClass> stdList;
+	StudentClass obj = new StudentClass();
+
+	protected override void OnInitialized()
+	{
+		stdList = Service.getAllStudentDetails();
+	}
+
+	bool found = true;
+
+	void findUser()
+	{
+		found = Service.findUser(obj.username, obj.password);
+
+		if(found) {
+			Navigate.NavigateTo("/details");
+		}
+		else
+		{
+			obj = new StudentClass();
+		}
+	}
+
+}
