@@ -30,7 +30,7 @@ namespace WebPortal.Services
             return null;
         }
 
-        public bool findUser(string username, string password)
+        public StudentClass? findUser(string username, string password)
         {
             List<StudentClass> stdList = getAllStudentDetails();
 
@@ -38,11 +38,11 @@ namespace WebPortal.Services
             {
                 if (stdList[i].username == username && stdList[i].password == password)
                 {
-                    return true;
+                    return stdList[i];
                 }
             }
 
-            return false;
+            return null;
         }
 
         public StudentClass? editDetails(int id)
@@ -71,6 +71,7 @@ namespace WebPortal.Services
                 stdDetails.hometown = stdUpdate.hometown;
                 stdDetails.password = stdUpdate.password;
                 stdDetails.dept_id = stdUpdate.dept_id;
+                stdDetails.is_logged = stdUpdate.is_logged;
                 _dbcontext.SaveChanges();
                 return true;
             }
@@ -94,5 +95,26 @@ namespace WebPortal.Services
                 return false;
             }
         }
+
+        public void toggleLoggedStatus(StudentClass obj)
+        {
+			var stdDetails = _dbcontext.tblStudent.FirstOrDefault(u => u.id == obj.id);
+            if (stdDetails != null) { 
+                stdDetails.is_logged = stdDetails.is_logged ? false : true;
+                _dbcontext.SaveChanges();
+            }
+		}
+
+        public int getLoggedUser()
+        {
+			List<StudentClass> stdList = _dbcontext.tblStudent.ToList();
+
+			for (int i = 0; i < stdList.Count; i++)
+			{
+				if (stdList[i].is_logged) return stdList[i].id;
+			}
+
+			return 0;
+		}
     }
 }

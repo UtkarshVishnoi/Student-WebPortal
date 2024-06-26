@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\utkar\\Documents\\Projects\\WebPortal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\components\\pages\\studentdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:components\\pages\\studentdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\components\\pages\\signup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:components\\pages\\signup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\components\\pages\\studentdetails.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:components\\pages\\studentdetails.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Signup.razor",
-              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\Signup.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Signup.razor",
-              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\Signup.razor",
-              "RelativeToolTip": "Components\\Pages\\Signup.razor",
-              "ViewState": "AQIAADUAAAAAAAAAAAApwGkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-25T19:33:02.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Login.razor",
               "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Login.razor",
               "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\Login.razor",
               "RelativeToolTip": "Components\\Pages\\Login.razor",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAD8AAAATAAAA",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-25T18:48:41.65Z",
+              "WhenOpened": "2024-06-26T17:23:25.919Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "StudentService.cs",
-              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Services\\StudentService.cs",
-              "RelativeDocumentMoniker": "Services\\StudentService.cs",
-              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Services\\StudentService.cs",
-              "RelativeToolTip": "Services\\StudentService.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAIwDcAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T18:31:34.666Z",
+              "Title": "StudentDetails.razor.css",
+              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor.css",
+              "RelativeDocumentMoniker": "Components\\Pages\\StudentDetails.razor.css",
+              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor.css",
+              "RelativeToolTip": "Components\\Pages\\StudentDetails.razor.css",
+              "ViewState": "AQIAABsBAAAAAAAAAAAgwCEBAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-26T16:59:11.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentDetails.razor",
+              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\StudentDetails.razor",
+              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor",
+              "RelativeToolTip": "Components\\Pages\\StudentDetails.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-26T16:50:12.819Z",
               "EditorCaption": ""
             }
           ]

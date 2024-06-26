@@ -1,4 +1,9 @@
 @page "/details"
+@using WebPortal.Data
+@using WebPortal.Services
+@inject NavigationManager Navigate
+@inherits OwningComponentBase<StudentService>
+@rendermode InteractiveServer
 
 <PageTitle>Student Details</PageTitle>
 <link rel="stylesheet" href="styles/details.css">
@@ -16,76 +21,46 @@
 				<img src="images/search.svg" alt="Search Icon" style="height: 70%; width: 70%; aspect-ratio: 1/1;">
 			</button>
 		</div> 
-		<div id="top-profile-div">
-			<div id="profile-pic-div">
-				<img src="images/p1.jpg" alt="Profile Picture" id="profile-pic">
+		@if (stdDet != null)
+		{
+			<div id="top-profile-div">
+				<div id="profile-pic-div">
+					<img src="@imgUrl" alt="Profile Picture" id="profile-pic">
+				</div>
+
+				<div class="dropdown">
+					<p id="dropbtn">@stdDet.username</p>
+					<div class="dropdown-content">
+						<button @onclick="logout">Logout</button>
+					</div>
+				</div>
 			</div>
-			<p id="profile-name"></p>
-		</div>
+		}		
 	</div>
 
 	<div id="content-div">
-
+		@if (stdDet != null)
+		{
+			
 		<div class="card">
 			<div class="profile-section">
 				<div class="profile-image">
-					<img src="student-photo.jpg" alt="Student Photo">
+					<img src="@imgUrl" alt="Student Photo">
 				</div>
 				<div class="basic-details">
-					<h1>John Doe</h1>
-					<p><strong>Student ID:</strong> 123456</p>
-					<p><strong>Class:</strong> 10th Grade</p>
-					<p><strong>Email:</strong> john.doe@example.com</p>
-					<p><strong>Phone:</strong> (123) 456-7890</p>
-					<p><strong>Class:</strong> 10th Grade</p>
-					<p><strong>Email:</strong> john.doe@example.com</p>
-					<p><strong>Phone:</strong> (123) 456-7890</p>
+					<h1>@stdDet.name</h1>
+					<p><strong>Course:</strong> @stdDet.course</p>
 				</div>
 			</div>
 			<div class="details-section">
 				<div class="personal-details">
 					<h2>Personal Details</h2>
-					<p><strong>Date of Birth:</strong> January 1, 2005</p>
-					<p><strong>Address:</strong> 1234 Elm Street, Springfield, IL</p>
-					<p><strong>Parent/Guardian:</strong> Jane Doe</p>
-					<p><strong>Contact:</strong> (987) 654-3210</p>
-					<p><strong>Date of Birth:</strong> January 1, 2005</p>
-					<p><strong>Address:</strong> 1234 Elm Street, Springfield, IL</p>
-					<p><strong>Parent/Guardian:</strong> Jane Doe</p>
-					<p><strong>Contact:</strong> (987) 654-3210</p>
-					<p><strong>Date of Birth:</strong> January 1, 2005</p>
-					<p><strong>Address:</strong> 1234 Elm Street, Springfield, IL</p>
-					<p><strong>Parent/Guardian:</strong> Jane Doe</p>
-					<p><strong>Contact:</strong> (987) 654-3210</p>
-					<p><strong>Date of Birth:</strong> January 1, 2005</p>
-					<p><strong>Address:</strong> 1234 Elm Street, Springfield, IL</p>
-					<p><strong>Parent/Guardian:</strong> Jane Doe</p>
-					<p><strong>Contact:</strong> (987) 654-3210</p>
+					<p><strong>Date of Birth:</strong> @stdDet.dob</p>
+					<p><strong>Address:</strong> @stdDet.hometown</p>
 				</div>
 				<div class="academic-records">
 					<h2>Academic Records</h2>
-					<table>
-						<tr>
-							<th>Subject</th>
-							<th>Grade</th>
-						</tr>
-						<tr>
-							<td>Mathematics</td>
-							<td>A</td>
-						</tr>
-						<tr>
-							<td>Science</td>
-							<td>A</td>
-						</tr>
-						<tr>
-							<td>History</td>
-							<td>B+</td>
-						</tr>
-						<tr>
-							<td>English</td>
-							<td>A-</td>
-						</tr>
-					</table>
+					<p><strong>CGPA:</strong> @stdDet.cgpa</p>
 				</div>
 				<div class="extracurricular">
 					<h2>Extracurricular Activities</h2>
@@ -98,5 +73,32 @@
 				</div>
 			</div>
 		</div>
+		}
 	</div>
 </div>
+
+@code {
+	StudentClass? stdDet = null;
+	StudentClass obj = new StudentClass();
+	string imgUrl = "";
+
+	protected override void OnInitialized()
+	{
+		int id = Service.getLoggedUser();
+		if (id != 0)
+		{
+			stdDet = Service.getStudentDetails(id);
+			imgUrl = $"images/{stdDet.id}.jpg";
+		}
+		else
+		{
+			Navigate.NavigateTo("/error");
+		}
+	}
+
+	void logout()
+	{
+		Service.toggleLoggedStatus(stdDet);
+		Navigate.NavigateTo("/login");
+	}
+}
