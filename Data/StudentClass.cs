@@ -18,7 +18,6 @@ namespace WebPortal.Data
         public DateOnly? dob { get; set; }
         public string password { get; set; }
         public int? dept_id { get; set; }
-
-
+        public bool is_logged { get; set; }
     }
 }
