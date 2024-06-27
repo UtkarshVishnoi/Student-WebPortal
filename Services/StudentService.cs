@@ -12,7 +12,7 @@ namespace WebPortal.Services
 
         public List<StudentClass> getAllStudentDetails()
         {
-            return _dbcontext.tblStudent.ToList();
+			return _dbcontext.tblStudent.ToList();
         }
 
         public StudentClass? getStudentDetails(int id)
@@ -115,6 +115,11 @@ namespace WebPortal.Services
 			}
 
 			return 0;
+		}
+
+        public DepartmentClass? getDeptName(int? dept_id)
+        {
+            return _dbcontext.tblDepartment.FirstOrDefault(u => u.dept_id == dept_id);
 		}
     }
 }
