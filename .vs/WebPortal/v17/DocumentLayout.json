@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "E:\\utkar\\Documents\\Projects\\WebPortal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\components\\pages\\studentdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:components\\pages\\studentdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\scripts\\details.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:wwwroot\\scripts\\details.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\components\\pages\\studentdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:components\\pages\\studentdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\components\\pages\\studentdetails.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -26,42 +30,52 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.razor",
-              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\Login.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Login.razor",
-              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\Login.razor",
-              "RelativeToolTip": "Components\\Pages\\Login.razor",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-26T17:23:25.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "StudentDetails.razor.css",
-              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor.css",
-              "RelativeDocumentMoniker": "Components\\Pages\\StudentDetails.razor.css",
-              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor.css",
-              "RelativeToolTip": "Components\\Pages\\StudentDetails.razor.css",
-              "ViewState": "AQIAABsBAAAAAAAAAAAgwCEBAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-26T16:59:11.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "StudentDetails.razor",
               "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\StudentDetails.razor",
               "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor",
               "RelativeToolTip": "Components\\Pages\\StudentDetails.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAAAGMAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-26T16:50:12.819Z",
+              "WhenOpened": "2024-06-26T19:55:29.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "Services\\StudentService.cs",
+              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Services\\StudentService.cs",
+              "RelativeToolTip": "Services\\StudentService.cs",
+              "ViewState": "AQIAAGsAAAAAAAAAAIA6wHkAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T19:32:26.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "details.js",
+              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\scripts\\details.js",
+              "RelativeDocumentMoniker": "wwwroot\\scripts\\details.js",
+              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\scripts\\details.js",
+              "RelativeToolTip": "wwwroot\\scripts\\details.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-26T18:34:47.212Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentDetails.razor.css",
+              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor.css",
+              "RelativeDocumentMoniker": "Components\\Pages\\StudentDetails.razor.css",
+              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor.css",
+              "RelativeToolTip": "Components\\Pages\\StudentDetails.razor.css",
+              "ViewState": "AQIAADgAAAAAAAAAAAAAAJAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-26T16:59:11.467Z"
             }
           ]
         }

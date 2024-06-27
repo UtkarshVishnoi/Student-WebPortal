@@ -6,21 +6,25 @@
 @rendermode InteractiveServer
 
 <PageTitle>Student Details</PageTitle>
-<link rel="stylesheet" href="styles/details.css">
 <script async src="scripts/details.js"></script>
 
 <div id="sidebar-div" class="sidebar-div">
-	<button onclick="toggleSidebar()">lies</button>
+	<div id="search-div" class="">
+		<div id="search-bar-div">
+		<input type="text" name="dept" id="dept-search" placeholder="Department Name">
+		<button id="search-btn">
+			<img src="images/search.svg" alt="Search Icon" style="height: 70%; width: 70%; aspect-ratio: 1/1;">
+		</button>
+		</div>
+	</div>
+	<button class="side-open-btn" onclick="toggleSidebar()">
+		<img id="nav-icon" src="images/right.svg" alt="Open" />
+	</button>
 </div>
 
 <div id="detail-container">
-	<div id="top-nav-div">
-		<div id="search-div">
-			<input type="text" name="dept" id="dept-search" placeholder="Department Name">
-			<button id="search-btn">
-				<img src="images/search.svg" alt="Search Icon" style="height: 70%; width: 70%; aspect-ratio: 1/1;">
-			</button>
-		</div> 
+	<div id="top-nav-div"> 
+		<div id="spacer-div"></div>
 		@if (stdDet != null)
 		{
 			<div id="top-profile-div">
@@ -79,7 +83,8 @@
 
 @code {
 	StudentClass? stdDet = null;
-	StudentClass obj = new StudentClass();
+	DepartmentClass? deptObj = null;
+	StudentClass? obj = null;
 	string imgUrl = "";
 
 	protected override void OnInitialized()
@@ -88,6 +93,10 @@
 		if (id != 0)
 		{
 			stdDet = Service.getStudentDetails(id);
+			if(stdDet.dept_id != null)
+			{
+				deptObj = Service.getDeptName(stdDet.dept_id);
+			}
 			imgUrl = $"images/{stdDet.id}.jpg";
 		}
 		else
