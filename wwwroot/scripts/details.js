@@ -1,5 +1,4 @@
 function toggleSidebar() {
-	console.log("hello");
 	const sidebarElem = document.getElementById("sidebar-div");
 	const detailElem = document.getElementById("detail-container");
 	const searchElem = document.getElementById("search-div");

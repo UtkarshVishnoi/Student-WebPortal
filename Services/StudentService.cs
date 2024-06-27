@@ -121,5 +121,39 @@ namespace WebPortal.Services
         {
             return _dbcontext.tblDepartment.FirstOrDefault(u => u.dept_id == dept_id);
 		}
+
+        public List<int> getDeptIds(string? deptName)
+        {
+            List<int> deptIds = new List<int>();
+			if (deptName != null && deptName != "")
+			{
+				List<DepartmentClass>? deptList = _dbcontext.tblDepartment.ToList();
+				deptName = deptName.Trim().ToLower();
+
+				for (int i = 0; i < deptList.Count; i++)
+				{
+					if (deptList[i].dept_name.Trim().ToLower().Contains(deptName))
+					{
+						deptIds.Add(deptList[i].dept_id);
+					}
+				}
+			}
+
+			return deptIds;
+		}
+        public List<StudentClass> deptSearchResults(string? searchStr)
+        {
+            List<int> deptIds = getDeptIds(searchStr);
+            List<StudentClass> searchRes = new List<StudentClass>();
+
+            for(int i = 0; i < deptIds.Count; i++)
+            {
+                StudentClass temp = getAllStudentDetails().FirstOrDefault(u => u.id == deptIds[i]);
+
+                if(temp != null) { searchRes.Add(temp); }
+            }
+
+            return searchRes;
+        }
     }
 }

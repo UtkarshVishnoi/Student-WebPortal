@@ -10,11 +10,19 @@
 
 <div id="sidebar-div" class="sidebar-div">
 	<div id="search-div" class="">
-		<div id="search-bar-div">
-		<input type="text" name="dept" id="dept-search" placeholder="Department Name">
-		<button id="search-btn">
+		<EditForm Model="searchObj" FormName="search-bar-form" id="search-bar-form" OnValidSubmit="search"
+			style="display: flex; width: 100%; height: 10%; justify-content: center; align-items: center;">
+		<input type="text" name="dept" id="dept-search" placeholder="Department Name" @bind="searchObj.searchStr">
+		<button type="submit" id="search-btn">
 			<img src="images/search.svg" alt="Search Icon" style="height: 70%; width: 70%; aspect-ratio: 1/1;">
 		</button>
+		</EditForm>
+
+		<div id="result-div">
+			@foreach(var item in searchRes)
+			{
+				<div id="result">@item.name</div>
+			}
 		</div>
 	</div>
 	<button class="side-open-btn" onclick="toggleSidebar()">
@@ -84,7 +92,9 @@
 @code {
 	StudentClass? stdDet = null;
 	DepartmentClass? deptObj = null;
-	StudentClass? obj = null;
+	StudentClass? popupObj = null;
+	SearchClass? searchObj = new SearchClass();
+	IList<StudentClass>? searchRes = new List<StudentClass>();
 	string imgUrl = "";
 
 	protected override void OnInitialized()
@@ -109,5 +119,15 @@
 	{
 		Service.toggleLoggedStatus(stdDet);
 		Navigate.NavigateTo("/login");
+	}
+
+	void search()
+	{
+		searchRes = Service.deptSearchResults(searchObj.searchStr);
+	}
+
+	public class SearchClass
+	{
+		public string? searchStr;
 	}
 }
