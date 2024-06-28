@@ -148,7 +148,7 @@ namespace WebPortal.Services
 
             for(int i = 0; i < deptIds.Count; i++)
             {
-                StudentClass temp = getAllStudentDetails().FirstOrDefault(u => u.id == deptIds[i]);
+                StudentClass temp = getAllStudentDetails().FirstOrDefault(u => u.dept_id == deptIds[i]);
 
                 if(temp != null) { searchRes.Add(temp); }
             }

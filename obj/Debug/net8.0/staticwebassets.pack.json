@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\images\\1.jpg"
     },
     {
+      "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\images\\close.svg",
+      "PackagePath": "staticwebassets\\images\\close.svg"
+    },
+    {
+      "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\images\\edit.svg",
+      "PackagePath": "staticwebassets\\images\\edit.svg"
+    },
+    {
       "Id": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\images\\left.svg",
       "PackagePath": "staticwebassets\\images\\left.svg"
     },
