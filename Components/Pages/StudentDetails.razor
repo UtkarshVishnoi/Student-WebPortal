@@ -21,7 +21,14 @@
 		<div id="result-div">
 			@foreach(var item in searchRes)
 			{
-				<div id="result">@item.name</div>
+				<div id="result">
+					<div>
+						<b style="font-size: 17px;">@item.name</b>
+					</div>
+					<div>
+						@Service.getDeptName(item.dept_id).dept_name
+					</div>
+				</div>
 			}
 		</div>
 	</div>
@@ -37,6 +44,9 @@
 		style="display: flex; justify-content: center; align-items: center;
 				width: 100%; height: 100%; flex-direction: column; row-gap: 4%;"
 		>
+			<fieldset id="form-fieldset">
+			<legend>Edit Form</legend>
+
 			<div class="edit-input">
 				<label>Name: </label>
 				<input type="text" @bind="popupClass.name" />
@@ -67,12 +77,16 @@
 			</div>
 			
 			<button type="submit" id="edit-form-btn">Save Changes</button>
+			</fieldset>
 		</EditForm>
 	</div>
 </div>
 
 <div id="detail-container">
 	<div id="top-nav-div"> 
+		<div id="page-header">
+			Web Portal
+		</div>
 		<div id="spacer-div"></div>
 		@if (stdDet != null)
 		{
@@ -82,7 +96,7 @@
 				</div>
 
 				<div class="dropdown">
-					<p id="dropbtn">@stdDet.username</p>
+					<p class="dropbtn">@stdDet.username</p>
 					<div class="dropdown-content">
 						<button @onclick="logout">Logout</button>
 						<button @onclick="delete" style="color: red;">Delete Account</button>
@@ -232,7 +246,7 @@
 			{
 				deptObj = Service.getDeptName(stdDet.dept_id);
 			}
-			imgUrl = $"images/{stdDet.id}.jpg";
+			imgUrl = $"images/1.jpg";
 		}
 		else
 		{
