@@ -21,7 +21,14 @@
 		<div id="result-div">
 			@foreach(var item in searchRes)
 			{
-				<div id="result">@item.name</div>
+				<div id="result">
+					<div>
+						<b style="font-size: 17px;">@item.name</b>
+					</div>
+					<div>
+						@Service.getDeptName(item.dept_id).dept_name
+					</div>
+				</div>
 			}
 		</div>
 	</div>
@@ -30,8 +37,56 @@
 	</button>
 </div>
 
+<div id="popup-back-div">
+	<div id="popup-div">
+		<img src="images/close.svg" alt="Close icon" id="close-popup"/>
+		<EditForm Model="popupClass" FormName="EditForm" OnValidSubmit="editFormSubmit"
+		style="display: flex; justify-content: center; align-items: center;
+				width: 100%; height: 100%; flex-direction: column; row-gap: 4%;"
+		>
+			<fieldset id="form-fieldset">
+			<legend>Edit Form</legend>
+
+			<div class="edit-input">
+				<label>Name: </label>
+				<input type="text" @bind="popupClass.name" />
+			</div>
+			<div class="edit-input">
+				<label>Course: </label>
+				<input type="text" @bind="@popupClass.course" />
+			</div>
+			<div class="edit-input">
+				<label>Semester: </label>
+				<input type="number" @bind="@popupClass.semester" />
+			</div>
+			<div class="edit-input">
+				<label>CGPA: </label>
+				<input type="number" @bind="@popupClass.cgpa" step="0.01" />
+			</div>
+			<div class="edit-input">
+				<label>DOB: </label>
+				<input type="date" @bind="@popupClass.dob" />
+			</div>
+			<div class="edit-input">
+				<label>Hometown: </label>
+				<input type="text" @bind="@popupClass.hometown" />
+			</div>
+			<div class="edit-input">
+				<label>Dept-ID: </label>
+				<input type="number" @bind="@popupClass.dept_id" />
+			</div>
+			
+			<button type="submit" id="edit-form-btn">Save Changes</button>
+			</fieldset>
+		</EditForm>
+	</div>
+</div>
+
 <div id="detail-container">
 	<div id="top-nav-div"> 
+		<div id="page-header">
+			Web Portal
+		</div>
 		<div id="spacer-div"></div>
 		@if (stdDet != null)
 		{
@@ -41,15 +96,16 @@
 				</div>
 
 				<div class="dropdown">
-					<p id="dropbtn">@stdDet.username</p>
+					<p class="dropbtn">@stdDet.username</p>
 					<div class="dropdown-content">
 						<button @onclick="logout">Logout</button>
+						<button @onclick="delete" style="color: red;">Delete Account</button>
 					</div>
 				</div>
 			</div>
 		}		
 	</div>
-
+	
 	<div id="content-div">
 		@if (stdDet != null)
 		{
@@ -60,20 +116,89 @@
 					<img src="@imgUrl" alt="Student Photo">
 				</div>
 				<div class="basic-details">
-					<h1>@stdDet.name</h1>
-					<p><strong>Course:</strong> @stdDet.course</p>
+					<div id="detail-name-div">
+						<h1>@stdDet.name</h1>
+							<div id="detail-edit-div">
+								<img src="images/edit.svg" alt="Alternate Text" id="detail-edit-icon" />
+							</div>
+					</div>
+					@if(stdDet.course != null)
+					{
+						<p><strong>Course:</strong> @stdDet.course</p>
+					}
+					@if (stdDet.dept_id != null)
+					{
+						<p><strong>Department: </strong> @Service.getDeptName(stdDet.dept_id).dept_name</p>
+					}
 				</div>
 			</div>
 			<div class="details-section">
 				<div class="personal-details">
-					<h2>Personal Details</h2>
-					<p><strong>Date of Birth:</strong> @stdDet.dob</p>
-					<p><strong>Address:</strong> @stdDet.hometown</p>
+					@if (stdDet.dob != null || stdDet.hometown != null || stdDet.dob != null)
+					{
+						<h2>Personal Details</h2>
+					}
+					@if (stdDet.username != null)
+					{
+						<p><strong>Username:</strong> @stdDet.username</p>
+					}
+					@if(stdDet.dob != null)
+					{
+						<p><strong>Date of Birth:</strong> @stdDet.dob</p>
+					}
+					@if (stdDet.hometown != null)
+					{
+						<p><strong>Address:</strong> @stdDet.hometown</p>
+					}
 				</div>
 				<div class="academic-records">
-					<h2>Academic Records</h2>
-					<p><strong>CGPA:</strong> @stdDet.cgpa</p>
+					@if (stdDet.cgpa != null || stdDet.semester != null || stdDet.course != null || stdDet.dept_id != null)
+					{
+						<h2>Academic Details</h2>
+					}
+					@if (stdDet.course != null)
+					{
+						<p><strong>Course:</strong> @stdDet.course</p>
+					}
+					@if (stdDet.cgpa != null)
+					{		
+						<p><strong>CGPA:</strong> @stdDet.cgpa</p>
+					}
+					@if (stdDet.dept_id != null)
+					{
+						<p><strong>Department: </strong> @Service.getDeptName(stdDet.dept_id).dept_name</p>
+					}
+					@if (stdDet.semester != null)
+					{
+						int? sem = stdDet.semester;
+
+						switch(sem)
+						{
+							case 1:
+							{
+								<p><strong>Semester:</strong> 1st Semester</p>
+								break;
+							}
+							case 2:
+							{
+								<p><strong>Semester:</strong> 2nd Semester</p>
+								break;
+							}
+							case 3:
+							{
+								<p><strong>Semester:</strong> 3rd Semester</p>
+								break;
+							}
+							default:
+							{
+								<p><strong>Semester:</strong> @(@sem)th Semester</p>
+								break;
+							}
+						}
+						}
 				</div>
+				@*
+
 				<div class="extracurricular">
 					<h2>Extracurricular Activities</h2>
 					<ul>
@@ -83,6 +208,7 @@
 						<li>Debate Club President</li>
 					</ul>
 				</div>
+				*@
 			</div>
 		</div>
 		}
@@ -92,8 +218,8 @@
 @code {
 	StudentClass? stdDet = null;
 	DepartmentClass? deptObj = null;
-	StudentClass? popupObj = null;
 	SearchClass? searchObj = new SearchClass();
+	StudentClass? popupClass = new StudentClass();
 	IList<StudentClass>? searchRes = new List<StudentClass>();
 	string imgUrl = "";
 
@@ -103,11 +229,24 @@
 		if (id != 0)
 		{
 			stdDet = Service.getStudentDetails(id);
+
+			popupClass.id = stdDet.id;
+			popupClass.name = stdDet.name;
+			popupClass.username = stdDet.username;
+			popupClass.course = stdDet.course;
+			popupClass.semester = stdDet.semester;
+			popupClass.cgpa = stdDet.cgpa;
+			popupClass.dob = stdDet.dob;
+			popupClass.hometown = stdDet.hometown;
+			popupClass.password = stdDet.password;
+			popupClass.dept_id = stdDet.dept_id;
+			popupClass.is_logged = stdDet.is_logged;
+
 			if(stdDet.dept_id != null)
 			{
 				deptObj = Service.getDeptName(stdDet.dept_id);
 			}
-			imgUrl = $"images/{stdDet.id}.jpg";
+			imgUrl = $"images/1.jpg";
 		}
 		else
 		{
@@ -121,9 +260,21 @@
 		Navigate.NavigateTo("/login");
 	}
 
+	void delete()
+	{
+		Service.deleteStudent(stdDet);
+		Navigate.NavigateTo("/login");
+	}
+
 	void search()
 	{
 		searchRes = Service.deptSearchResults(searchObj.searchStr);
+	}
+
+	void editFormSubmit()
+	{
+		Service.updateDetails(popupClass);
+		stdDet = popupClass;
 	}
 
 	public class SearchClass

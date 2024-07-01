@@ -3,76 +3,12 @@
 @using WebPortal.Services
 @inherits OwningComponentBase<StudentService>
 @rendermode InteractiveServer
-
+@inject NavigationManager Navigate
 <PageTitle>Home</PageTitle>
 
-@*
-<div>
-    <EditForm Model="obj" OnValidSubmit="addStudent" FormName="StudentForm">
-        <input type="text" name="name" placeholder="name" class="d-block" @bind="obj.name"/>
-        <input type="text" name="username" placeholder="username" class="d-block" @bind="obj.username" />
-        <input type="text" name="course" placeholder="course" class="d-block" @bind="obj.course" />
-        <input type="number" name="semester" placeholder="semester" class="d-block" @bind="obj.semester" />
-        <input type="number" name="cgpa" placeholder="cgpa" class="d-block" @bind="obj.cgpa" step="0.01"/>
-        <input type="date" name="dob" class="d-block" @bind="obj.dob" />
-        <input type="text" name="hometown" placeholder="hometown" class="d-block" @bind="obj.hometown" />
-        <input type="password" name="password" placeholder="password" class="d-block" @bind="obj.password" />
-        <input type="number" name="deptId" placeholder="deptId" class="d-block" @bind="obj.dept_id" />
-        <input type="submit" />
-    </EditForm>
-</div>
-*@
-
-
-
-<br />
-<br />
-<br />
-<br />
-@foreach (var item in stdList)
-{
-    <h2>@item.id</h2>
-    <h2>@item.name</h2>
-    <h2>@item.username</h2>
-    <h2>@item.cgpa</h2>
-    <h2>@item.course</h2>
-    <h2>@item.semester</h2>
-    <h2>@item.dob</h2>
-    <h2>@item.hometown</h2>
-    <h2>@item.password</h2>
-    <h1>@item.dept_id</h1>
-
-}
-
-
-
 @code {
-    IList<StudentClass> stdList;
-    StudentClass obj = new StudentClass();
-
-    void printStudents(StudentClass obj)
-    {
-        Console.WriteLine(obj.id);
-        Console.WriteLine(obj.name);
-        Console.WriteLine(obj.username);
-        Console.WriteLine(obj.cgpa);
-        Console.WriteLine(obj.semester);
-        Console.WriteLine(obj.course);
-        Console.WriteLine(obj.dob);
-        Console.WriteLine(obj.hometown);
-        Console.WriteLine(obj.password);
-        Console.WriteLine(obj.dept_id);
-    }
-
-    void addStudent()
-    {
-        obj.id = 0;
-        Service.addStudent(obj);
-        stdList = Service.getAllStudentDetails();
-    }
-
     protected override void OnInitialized()
     {
-        stdList = Service.getAllStudentDetails();
+        Navigate.NavigateTo("/login");
     }
 }

@@ -7,8 +7,20 @@
       "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:components\\pages\\studentdetails.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\components\\pages\\login.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:components\\pages\\login.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\components\\pages\\studentdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:components\\pages\\studentdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|e:\\utkar\\documents\\projects\\webportal\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EDBA0BA5-283C-4EB1-92F8-2DE0FB2FB5DB}|WebPortal.csproj|solutionrelative:wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +30,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.razor.css",
+              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\Login.razor.css",
+              "RelativeDocumentMoniker": "Components\\Pages\\Login.razor.css",
+              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\Login.razor.css",
+              "RelativeToolTip": "Components\\Pages\\Login.razor.css",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAABoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-01T17:43:08.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "app.css",
+              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "wwwroot\\app.css",
+              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\wwwroot\\app.css",
+              "RelativeToolTip": "wwwroot\\app.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-01T17:26:55.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.razor",
+              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Components\\App.razor",
+              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\App.razor",
+              "RelativeToolTip": "Components\\App.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAACCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-01T17:26:30.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentDetails.razor",
+              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\StudentDetails.razor",
+              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor",
+              "RelativeToolTip": "Components\\Pages\\StudentDetails.razor",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAAAGIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-27T17:50:15.206Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,22 +92,9 @@
               "RelativeDocumentMoniker": "Components\\Pages\\StudentDetails.razor.css",
               "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor.css",
               "RelativeToolTip": "Components\\Pages\\StudentDetails.razor.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAPAAAA",
+              "ViewState": "AQIAAEMBAAAAAAAAAAAAAE0BAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-27T17:50:20.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StudentDetails.razor",
-              "DocumentMoniker": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\StudentDetails.razor",
-              "ToolTip": "E:\\utkar\\Documents\\Projects\\WebPortal\\Components\\Pages\\StudentDetails.razor",
-              "RelativeToolTip": "Components\\Pages\\StudentDetails.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-27T17:50:15.206Z",
+              "WhenOpened": "2024-07-01T17:27:59.1Z",
               "EditorCaption": ""
             }
           ]
